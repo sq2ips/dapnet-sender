@@ -12,8 +12,7 @@ subscribers = ["sq2ips"]
 transmitters = ["sr2uvg"]
 transmitter_groups = ["sp-all"]
 
-#postDataLambda = lambda full_message, expiration_date : {"data": full_message,"priority": 4,"recipients": {"subscribers": subscribers},"distribution": {"transmitters": transmitters,"transmitter_groups": transmitter_groups},"expires_on": expiration_date}
-postDataLambda = lambda full_message, expiration_date : { "text": full_message, "callSignNames": subscribers, "transmitterGroupNames": transmitter_groups, "emergency": False }
+postDataLambda = lambda full_message : { "text": full_message, "callSignNames": subscribers, "transmitterGroupNames": transmitter_groups, "emergency": False }
 
 mainLoopSleep = 1
 

@@ -3,7 +3,6 @@ import sys, os, json, time
 import requests
 import schedule
 from dotenv import load_dotenv
-from datetime import datetime
 
 import config
 
@@ -38,9 +37,7 @@ def postMessage(message, auth):
         logger.warning(f"Message too long ({len(full_message)}), shortening to 80...")
         full_message = full_message[:80]
 
-    expiration_date = datetime.now().strftime("%Y-%m-%dT%H:%M:%S+%Z")
-
-    postData = config.postDataLambda(full_message, expiration_date)
+    postData = config.postDataLambda(full_message)
 
     postDataJson = json.dumps(postData).encode('utf-8')
     
