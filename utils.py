@@ -1,0 +1,19 @@
+def trim_pl(value): 
+    return value.replace("ą", "a")\
+    .replace("ć", "c")\
+    .replace("ę", "e")\
+    .replace("ł", "l")\
+    .replace("ń", "n")\
+    .replace("ó", "o")\
+    .replace("ś", "s")\
+    .replace("ź", "z")\
+    .replace("ż", "z")\
+    .replace("Ą", "A")\
+    .replace("Ć", "C")\
+    .replace("Ę", "E")\
+    .replace("Ł", "L")\
+    .replace("Ń", "N")\
+    .replace("Ó", "I")\
+    .replace("Ś", "S")\
+    .replace("Ż", "Z")\
+    .replace("Ź", "Z")
