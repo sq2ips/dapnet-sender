@@ -22,7 +22,7 @@ startup = Startup(
 )
 
 from modules.sun import SunriseSunset
-sunrisesunset = SunriseSunset(
+sunrises_unset = SunriseSunset(
     lat='54.5206',
     lon='18.5392',
     localtime=True
@@ -50,12 +50,13 @@ airpolution_gios = AirPolutionGIOS(
     sensor_id=732)
 
 modules = [
-    (startup, None),
-    (sunrisesunset, None),
-    (radiation_paa, None),
-    (meteoalert_imgw, None)
+#    (startup, None),
+#    (sunrise_sunset, None),
+#    (radiation_paa, None),
+#    (meteoalert_imgw, None)
+    (airpolution_gios, None)
 #    (testsendermodule, schedule.every(3).seconds),
-#    (sunrisesunset, schedule.every(3).seconds)
+#    (sunrise_sunset, schedule.every(3).seconds)
 #    (radiation_paa, None)
 #    (meteoalert_imgw, None)
 ]

@@ -1,0 +1,7 @@
+services:
+  dapnet-sender:
+    build: .
+    volumes:
+      - ./config.py:/usr/src/dapnet-sender/config.py:ro
+      - ./dapnet.log:/usr/src/dapnet-sender/dapnet.log:rw
+      - ./.env:/usr/src/dapnet-sender/.env
